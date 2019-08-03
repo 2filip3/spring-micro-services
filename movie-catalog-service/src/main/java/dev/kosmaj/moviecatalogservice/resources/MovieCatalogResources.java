@@ -25,7 +25,7 @@ public class MovieCatalogResources {
 	
 	@Autowired
 	private RestTemplate restTemplate;
-	// prva mala github izmena
+	
 	//@Autowired
 	//private WebClient.Builder webClientBuilder;
 	
