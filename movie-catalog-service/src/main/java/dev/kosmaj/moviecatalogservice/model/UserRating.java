@@ -23,4 +23,9 @@ public class UserRating {
 		this.userRatings = userRatings;
 	}
 
+	@Override
+	public String toString() {
+		return "UserRating [userRatings=" + userRatings + "]";
+	}
+
 }

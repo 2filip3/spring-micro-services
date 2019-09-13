@@ -1,7 +1,7 @@
 package dev.kosmaj.moviecatalogservice.model;
 
 public class CatalogMovie {
-
+	
 	private String name;
 	private String description;
 	private int rating;
@@ -39,6 +39,11 @@ public class CatalogMovie {
 
 	public void setRating(int rating) {
 		this.rating = rating;
+	}
+
+	@Override
+	public String toString() {
+		return "CatalogMovie [name=" + name + ", description=" + description + ", rating=" + rating + "]";
 	}
 
 }

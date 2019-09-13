@@ -25,7 +25,7 @@ public class RatingsResources {
 		
 		List<Rating> ratings = Arrays.asList(
 				new Rating("003", 7),
-				new Rating("004", 6)
+				new Rating("005", 6)
 				);
 		
 		UserRating userRatings = new UserRating();

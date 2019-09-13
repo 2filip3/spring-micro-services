@@ -41,4 +41,9 @@ public class Movie {
 		this.description = description;
 	}
 
+	@Override
+	public String toString() {
+		return "Movie [movieId=" + movieId + ", name=" + name + ", description=" + description + "]";
+	}
+
 }
