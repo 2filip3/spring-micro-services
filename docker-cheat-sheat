@@ -1,0 +1,29 @@
+*** Docker *** 
+
+# docker build -t (target) {appName} {path_off_the_app e.g. "." as current folder}
+# docker run -d(daemon) -p 8080:8080(mapping ports, host:docker) -it(interactive) --name={someName}  {docker image built} -> running docker
+# docker container logs {container_name} -> open the logs of specific container
+# sudo docker container stop $(sudo docker container ls -aq) -> stop all the containers
+# sudo docker container rm -f $(sudo docker container ls -aq) -> remove all of the containers
+# sudo docker exec -it {container_name} bash -> open shell inside of the container
+# CTRL + P + Q -> detach from the container
+# sudo service docker restart -> restart docker
+
+*** Network ***
+
+# sudo docker network create -d overlay --attachable {network_name} -> OVERLAY network for intercommunication between containers
+# sudo docker network inspect bridge {network_name} -> see details of the network/bridge
+# sudo docker network disconnect {network_name} {container_name}
+# docker inspect {container_id} | grep "IPAddress" -> get ip address of the specific container
+# docker network create {network_name} -> create network/bridge
+# sudo docker network connect {network name} {container-name}
+# docker swarm init -> init swarm scope
+
+
+*** Container ***
+# root@{containerId}:/sbin# ip address -> shows the network networks. Container network loops. Network architecture
+
+
+sudo docker run -it -d -p 8092:8092 --name=ratings-data-service --network=main_docker_network kosmaj/ratings-data-service
+
+eureka.client.service-url.defaultZone = http://${eureka.instance.hostname}:${server.port}/eureka
